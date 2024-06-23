@@ -12,7 +12,7 @@ pipeline {
         stage('Terraform Provision') {
             steps {
                 sh """
-                    terraform init
+                    terraform init -reconfigure
                     terraform plan
                     terraform apply --auto-approve
                 """
