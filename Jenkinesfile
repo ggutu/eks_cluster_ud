@@ -4,11 +4,11 @@ pipeline {
                 choice(name: 'deploy_choice', choices:['apply','destroy'],description:'The deployment type')
                   }
  stages {
-        stage('Clone Terraform Repo') {
+        /*stage('Clone Terraform Repo') {
             steps {
                 echo 'Hello World'
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ggutu/devopscourse-Raj.git']])
-        }}
+        }}*/
         stage('Terraform Provision') {
             steps {
                 sh """
